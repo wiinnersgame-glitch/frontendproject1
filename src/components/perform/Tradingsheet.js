@@ -31,7 +31,7 @@ export default function Sheet() {
   if (loading) {
     return (
       <div className="w-full h-[40vh] flex flex-col justify-center items-center px-4">
-        <p className="text-3xl md:text-5xl lg:text-6xl font-playfair font-bold text-center">
+        <p className="text-3xl md:text-4xl lg:text-6xl font-playfair font-bold text-center">
           Loading Performance Sheet...
         </p>
       </div>
