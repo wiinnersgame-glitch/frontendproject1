@@ -94,7 +94,7 @@ export default function Blog() {
 
 
   return (
-    <div className="p-10 md:mt-20 ">
+    <div className="p-10 mt-20 ">
       {/* 🔍 Search Bar */}
       <div className="mb-6 w-full flex justify-center">
         <input
@@ -171,12 +171,12 @@ export default function Blog() {
       )}
 
      <div className="flex justify-center pt-4">
-       <div className="w-[90%] flex lg:justify-start flex-wrap gap-3">
+       <div className="w-[90%] flex justify-evenly lg:justify-center flex-wrap gap-3">
         {
           months.map((e)=>{
             return(
           
-             <button className="px-4 py-2 text-2xl  border-2 border-primary"  onClick={() => {setSearch(e)
+             <button className="px-4 py-2 text-sm md:text-xl  border-2 border-primary"  onClick={() => {setSearch(e)
               console.log(e);
               
              }} >

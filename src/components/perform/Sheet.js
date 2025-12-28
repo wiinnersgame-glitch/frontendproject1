@@ -41,38 +41,41 @@ export default function Sheet() {
   }
 
   return (
-    <div className="flex flex-col  p-6 justify-start  gap-6">
+  <div className="flex flex-col  p-6 justify-start  gap-6">
      
-      <div className=" flex flex-wrap justify-center gap-4">
-        {posts
+    <div className=" flex flex-wrap justify-center gap-4">
+      {posts.filter((post) => post.category === "investment").length === 0 ? (
+        <div className="w-full text-center text-gray-400 text-lg font-semibold">
+          No performance sheet available
+        </div>
+      ) : (
+        posts
           .filter((post) => post.category === "investment") // <-- Filter condition
           .map((post) => (
-       
-              <div
-                key={post._id}
-                className="w-full md:w-3/12 h-auto border-2 bg-gradient-to-r from-pink-700 via-purple-700 to-sky-700 p-1 flex justify-center items-center rounded-xl bg-secondary hover:shadow-lg"
-                onClick={() => setSelectedImage(post.imageUrl)}>
-                <div className="p-4 rounded-xl bg-white">
-                  <img
-                    src={post.imageUrl}
-                    alt={post.category}
-                    className="w-full h-3/6 object-cover rounded-lg"
-                  />
-                </div>
-              
+            <div
+              key={post._id}
+              className="w-full md:w-3/12 h-auto border-2 bg-gradient-to-r from-pink-700 via-purple-700 to-sky-700 p-1 flex justify-center items-center rounded-xl bg-secondary hover:shadow-lg"
+              onClick={() => setSelectedImage(post.imageUrl)}
+            >
+              <div className="p-4 rounded-xl bg-white">
+                <img
+                  src={post.imageUrl}
+                  alt={post.category}
+                  className="w-full h-3/6 object-cover rounded-lg"
+                />
+              </div>
             </div>
-          ))}
-      </div>
-
-
-
-       {/* 🔥 THIS is how ImagePreview is used */}
-      {selectedImage && (
-        <Performance
-          image={selectedImage}
-          onClose={() => setSelectedImage(null)}
-        />
+          ))
       )}
     </div>
-  );
+
+    {selectedImage && (
+      <Performance
+        image={selectedImage}
+        onClose={() => setSelectedImage(null)}
+      />
+    )}
+  </div>
+);
+
 }

@@ -28,7 +28,7 @@ const apiUrl = process.env.REACT_APP_API_URL;
   if (!blog) return <p className="p-10">Blog not found.</p>;
 
   return (
-    <div className="p-10 max-w-4xl mx-auto">
+    <div className="p-10 max-w-4xl mx-auto mt-20">
       <h1 className="text-4xl text-center font-playfair text-primary capitalize font-extrabold mb-4">{blog.title}</h1>
       {blog.image && (
         <img
