@@ -64,7 +64,7 @@ function App() {
       <Review />
 
       {/* Partners */}
-      <Partner />
+      {/* <Partner /> */}
 
       {/* <Footer /> */}
     </div>

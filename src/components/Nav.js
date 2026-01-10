@@ -39,18 +39,18 @@ export default function Nav() {
         {
             label: "FnO ▸", href: "/services/forex/gold",
             submenu: [
-                { name: "Futures", href: "/services/forex/gold" },
-                { name: "Options", href: "/services/forex/currency" },
-                { name: "Positional Investing", href: "/services/forex/crude" },
+                { name: "Futures", href: "#" },
+                { name: "Options", href: "#" },
+                { name: "Positional Investing", href: "#" },
             ],
         },
         {
-            label: "Algo Trading ▸", href: "https://tradedge.co.in/ " ,Target: "blank",
+            label: "Algo Trading ▸", href: "# " ,Target: "blank",
             submenu: [
-                { name: "Index", href: "/services/forex/gold" },
-                { name: "Forex", href: "/services/forex/currency" },
-                { name: "Commodoties ", href: "/services/forex/crude" },
-                { name: "Crypto ", href: "/services/forex/crude" },
+                { name: "Index", href: "#" },
+                { name: "Forex", href: "#" },
+                { name: "Commodoties ", href: "#" },
+                { name: "Crypto ", href: "#" },
             ]
         },
         {
